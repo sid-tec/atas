@@ -1,34 +1,14 @@
-import 'reuniao_interface.dart';
-import 'reuniao_data_class.dart';
+abstract interface class Reuniao {
+  int get numero;
+  int? get aprovada;
 
-class Reuniao implements ReuniaoInterface {
-  ReuniaoDataClass dados;
-  Reuniao(this.dados);
+  bool get ordinaria;
+  String get onde;
+  DateTime get quando;
 
-  @override
-  int? get aprovada => dados.aprovada;
+  String get presidente;
+  String? get naoChefe;
 
-  @override
-  List<String>? get justificaram => dados.justificaram;
-
-  @override
-  String? get naoChefe => dados.naoChefe;
-
-  @override
-  int get numero => dados.numero;
-
-  @override
-  String get onde => dados.onde;
-
-  @override
-  bool get ordinaria => dados.ordinaria;
-
-  @override
-  List<String> get presentes => dados.presentes;
-
-  @override
-  String get presidente => dados.presidente;
-
-  @override
-  DateTime get quando => dados.quando;
+  List<String> get presentes;
+  List<String> get justificaram;
 }

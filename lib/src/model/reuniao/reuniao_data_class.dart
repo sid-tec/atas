@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
+
 import 'package:collection/collection.dart';
 
 class ReuniaoDataClass {
@@ -11,7 +12,7 @@ class ReuniaoDataClass {
   String presidente;
   String? naoChefe;
   List<String> presentes;
-  List<String>? justificaram;
+  List<String> justificaram;
 
   ReuniaoDataClass({
     required this.numero,
@@ -22,7 +23,7 @@ class ReuniaoDataClass {
     required this.presidente,
     this.naoChefe,
     required this.presentes,
-    this.justificaram,
+    required this.justificaram,
   });
 
   ReuniaoDataClass copyWith({
@@ -73,9 +74,7 @@ class ReuniaoDataClass {
       presidente: map['presidente'] as String,
       naoChefe: map['naoChefe'] != null ? map['naoChefe'] as String : null,
       presentes: List<String>.from((map['presentes'] as List<String>)),
-      justificaram: map['justificaram'] != null
-          ? List<String>.from((map['justificaram'] as List<String>))
-          : null,
+      justificaram: List<String>.from((map['justificaram'] as List<String>)),
     );
   }
 
