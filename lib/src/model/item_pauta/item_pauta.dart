@@ -1,5 +1,5 @@
-abstract class ItemPautaInterface {
-  int get reuniao;
+abstract interface class ItemPauta {
+  int get reuniao_id;
 
   int get numero;
 
