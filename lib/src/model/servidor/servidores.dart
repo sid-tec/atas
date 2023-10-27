@@ -319,4 +319,12 @@ enum Servidores {
     required this.sala,
     required this.masculino,
   });
+
+  static List<Servidores> byKeys(List<String> keys) {
+    final list = <Servidores>[];
+    for (var serv in Servidores.values) {
+      if (keys.contains(serv.key)) list.add(serv);
+    }
+    return list;
+  }
 }
